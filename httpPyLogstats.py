@@ -21,7 +21,7 @@ size = r'(?P<size>\S+)'
 
 http_re_match = host + space + dash + space + user + space + reqtime + space + method + space + section + subsection + space + protocol + space + status + space + size
 
-log_stats_df = pd.DataFrame()
+log_stats_df = pd.DataFrame(columns=["date_time","host","user_id","method","section","subsection","protocol","response_code","content_size"])
 alerts_df = pd.DataFrame(columns=["date_start", "date_end", "type", "value"])
 
 # Available configuration used as global variable
